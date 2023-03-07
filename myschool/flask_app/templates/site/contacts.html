@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Art School | Contacts</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/grid_12.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slider.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/tms-0.4.1.js') }}"></script>
+<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
+<script>
+$(document)
+    .ready(function () {
+    $('.slider')
+        ._TMS({
+        show: 0,
+        pauseOnHover: true,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 800,
+        preset: 'fade',
+        pagination: true,
+        pagNums: false,
+        slideshow: 7000,
+        numStatus: false,
+        banners: false,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body>
+<div class="main">
+  <!--==============================header=================================-->
+  <header>
+    <center>
+
+      <ul class="menu">
+		<li><a href="/home" class="clr-5">Home</a></li>
+		<li><a href="/aboutuser" class="clr-2">About</a></li>
+		<li class="current"><a href="/contact" class="clr-5">Contacts</a></li>
+		</ul>
+      </center>
+  </header>
+  <!--==============================content================================-->
+  <section id="content">
+    <div class="container_12">
+      <div class="grid_4 bot-1">
+        <h2 class="top-6">Contact Us</h2>
+        <div class="map">
+          <img src="https://searchengineland.com/wp-content/seloads/2014/08/google-g-maps-ss-1920-800x450.jpg" width="260px"></img>
+        </div>
+        <dl>
+          <dt>Avenue Hédi Nouira Ennasr 2 <br>
+            2037 Ariana</dt>
+          <dd><span>Telephone: </span>00216 70 111111</dd>
+          <dd><span>E-mail: </span><a href="#" class="link">ennasrschool@education.com</a></dd>
+        </dl>
+      </div>
+      <div class="grid_8">
+        <div class="block-1 top-5">
+          <div class="block-1-shadow">
+            <h2 class="clr-6">Contact Form</h2>
+            <form id="form" method="post" action="#">
+              <fieldset>
+                <label><strong>Name:</strong>
+                  <input type="text" value="">
+                  <strong class="clear"></strong></label>
+                <label><strong>Email:</strong>
+                  <input type="text" value="">
+                  <strong class="clear"></strong></label>
+                <label><strong>Phone:</strong>
+                  <input type="text" value="">
+                  <strong class="clear"></strong></label>
+                <label><strong>Message:</strong>
+                  <textarea></textarea>
+                  <strong class="clear"></strong></label>
+                <strong class="clear"></strong>
+                <div class="btns pad-2"><a href="#" class="link-2">Clear</a><a href="#" class="link-2">Send</a></div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <!--==============================footer=================================-->
+        <footer>
+          <p>© 2023 Ennasr School</p>
+          <p>Website powered by Najwa Elfahem & Soumaya Cherichi</p>
+        </footer>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

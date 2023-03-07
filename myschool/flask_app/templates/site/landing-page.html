@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Art School</title>
+<meta charset="utf-8">
+<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}"> -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/grid_12.css') }}">
+<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slider.css') }}"> -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/tms-0.4.1.js') }}"></script>
+<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
+<script>
+$(document)
+    .ready(function () {
+    $('.slider')
+        ._TMS({
+        show: 0,
+        pauseOnHover: true,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 800,
+        preset: 'fade',
+        pagination: true,
+        pagNums: false,
+        slideshow: 7000,
+        numStatus: false,
+        banners: false,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+</script>
+<style>
+body {
+	width:100%;
+  height:100%;
+	background: url(https://i.pinimg.com/originals/65/d7/05/65d705d2f7a515e06373caeaabad52d9.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	}
+  .link-2 {
+	font-size:50px;
+	line-height:36px;
+	color:#190aa3;
+	font-weight:bold;
+	font-family: 'Cabin Sketch', cursive;
+	letter-spacing:-1px;
+	display:inline-block;
+}
+.link-3 {
+	font-size:30px;
+	line-height:20px;
+	color:#db621b;
+	font-weight:bold;
+	font-family: 'Cabin Sketch', cursive;
+	letter-spacing:-1px;
+	display:inline-block;
+}
+.link-2:hover {
+	color:#b30800;
+}
+.clr-1 {
+	color:#0072ff;
+}
+.clr-2 {
+	color:#00ae35;
+}
+.clr-3 {
+	color:#bfaf00;
+}
+.clr-4 {
+	color:#d16813;
+}
+.clr-5 {
+	color:#a400b3;
+}
+.clr-6 {
+	color:#000;
+}
+.clr-7 {
+	color:#fff;
+}
+</style>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+
+<body>
+<div class="main">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <!--==============================header=================================-->
+  <center><a href="/aboutuser" class="link-2">Welcome to Our School Ennasr School <br><br>Please Enter</a></center>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </section>
+</div>
+           <script>
+       
+               let signupBtn = document.getElementById("signupBtn");
+               let signinBtn = document.getElementById("signinBtn");
+               let nameField1 = document.getElementById("nameField1");
+               let nameField2 = document.getElementById("nameField2");
+               let nameField3 = document.getElementById("nameField3");
+       
+               
+               let title = document.getElementById("title");
+       
+               signinBtn.onclick = function(){
+                   nameField1.style.maxHeight = "0"
+                   nameField2.style.maxHeight = "0"
+                   nameField3.style.maxHeight = "0"
+       
+                   title.innerHTML= "Sign in"
+                   signupBtn.classList.add("disable");
+                   signinBtn.classList.remove("disable");
+               }
+               signupBtn.onclick = function(){
+                   nameField1.style.maxHeight = "60px"
+                   nameField1.style.maxHeight = "60px"
+                   nameField3.style.maxHeight = "60px"
+       
+                   title.innerHTML= "Sign up"
+                   signupBtn.classList.remove("disable");
+                   signinBtn.classList.add("disable");
+               }
+               
+           </script>
+          </div>
+        </div>
+        <!--==============================footer=================================-->
+        <footer>
+          <p>© 2023 Ennasr School</p>
+          <p>Website powered by Najwa Elfahem & Soumaya Cherichi</a></p>
+        </footer>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

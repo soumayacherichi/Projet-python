@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Cahier de texte</title>
+        <meta name="description" lang="fr" content="Un E.N.T (espace numérique de travail) simple, gratuit et sécurisé doté d&#039;un blog, d&#039;un cahier de texte numérique, d&#039;une médiathèque, d&#039;un coin des élèves permettant aux enseignants de partager avec les familles les évènements de l&#039;année scolaire.">
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="csrf-token" content="BLfLTe7VfW5irLbAmWVexxTVNeuCmCDhAqqmq1dN">
+<meta name="author" content="Des Images et des Mots">
+<meta name="keywords" lang="fr" content="ent, espace numérique de travail, mediatheque, élèves, classe, école, enseignant, blog, gratuit, photos, sécurisé, livre photo, album photo, année scolaire, cahier de texte numérique, séjour scolaire, sortie scolaire">
+<!-- <link rel="shortcut icon" href="https://s1.toutemonannee.com/img/favicon/tma/favicon.ico?v=5.9.0" type="image/x-icon" /> -->
+<!-- <link rel="icon" href="https://s1.toutemonannee.com/img/favicon/tma/favicon-16x16.png?v=5.9.0" type="image/png" sizes="16x16" /> -->
+<!-- <link rel="icon" href="https://s1.toutemonannee.com/img/favicon/tma/favicon-32x32.png?v=5.9.0" type="image/png" sizes="32x32" /> -->
+<!-- <link rel="icon" href="https://s1.toutemonannee.com/img/favicon/tma/favicon-96x96.png?v=5.9.0" type="image/png" sizes="96x96" /> -->
+<!-- <link rel="icon" href="https://s1.toutemonannee.com/img/favicon/tma/favicon-192x192.png?v=5.9.0" type="image/png" sizes="192x192" />     -->
+    
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/grid_12.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slider.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/tms-0.4.1.js') }}"></script>
+<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://s1.toutemonannee.com/assets/vendors/vendors.min.css?v=5.9.0">
+<link rel="stylesheet" href="https://s1.toutemonannee.com/assets/css/instance/tma-theme.css?v=5.9.0">
+<link rel="stylesheet" href="https://s1.toutemonannee.com/assets/css/instance/tma.css?v=5.9.0">
+<link rel="stylesheet" href="https://s1.toutemonannee.com/assets/css/custom/paper.css?v=5.9.0">
+<link rel="stylesheet" type="text/css" media="screen" href="/Flask_app/static/css/reset.css">
+<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+    @media only screen and (min-width: 900px) {
+    .navigation {
+        display: none;
+        }
+    }
+    </style>
+    <style>
+        /* #wrapper{
+	background-image : url('/images/bg.jpg');
+} */
+/* 
+#header{
+	background: url('bkg_header.jpg') repeat-x top
+}
+
+#header_centre{
+	background: url('header.png') no-repeat center top;
+} */
+
+.texte1{
+	color: #1c4d5e;
+}
+.texte2{
+	color: #eef9ff;
+}
+.texte3{
+	color: #eef9ff;
+}
+    .calendar_date {
+        cursor: pointer;
+    }
+    input[readonly] {
+        background-color: white !important;
+    }
+    .this-day {
+        text-transform: capitalize;
+    }
+    #calendar .agenda-week-nav,
+    .agenda-tabs-select { display: none; }
+    .agenda-tabs li {
+        float: none !important;
+        display: inline-block !important;
+    }
+    .agenda-tabs li a {
+        color : #fff !important;
+    }
+    .agenda-tabs li:not(.active) {
+        opacity: .5;
+    }
+    .agenda-tabs li:not(.active):hover {
+        opacity: 1;
+    }
+    a.Monday {
+        background: #f3c500 !important;
+    }
+    a.Tuesday {
+        background: #ff68fa !important;
+    }
+    a.Wednesday {
+        background: #1dcd6e !important;
+    }
+    a.Thursday {
+        background: #e97f0a !important;
+    }
+    a.Friday {
+        background: #2597dd !important;
+    }
+    a.Saturday {
+        background: #8f41af !important;
+    }
+    a.Sunday {
+        background: #ea4c36 !important;
+    }
+    #Monday {
+        border: 10px solid #f3c500 !important;
+    }
+    #Tuesday {
+        border: 10px solid  #ff68fa !important;
+    }
+    #Wednesday {
+        border: 10px solid  #1dcd6e !important;
+    }
+    #Thursday {
+        border: 10px solid  #e97f0a !important;
+    }
+    #Friday {
+        border: 10px solid  #2597dd !important;
+    }
+    #Saturday {
+        border: 10px solid  #8f41af !important;
+    }
+    #Sunday {
+        border: 10px solid  #ea4c36 !important;
+    }
+    li.count-info .label {
+        top: -5px !important
+    }
+    .file p{
+        margin-bottom:5px;
+    }
+    .editable-input, .editable-buttons {
+        float:left;
+    }
+    .editable-input input{
+        width: 300px !important;
+        padding-right: 2px !important;
+        padding-left: 2px !important;
+    }
+    .editable-clear-x{
+        display: none !important;
+    }
+    .editable-buttons, .editable-buttons button{
+        margin-left: 0 !important;
+        border-radius: 0 !important;
+    }
+    .editable.btn-primary {
+        color:white!important;
+    }
+</style>
+<style>
+    .chosen-choices .group-name {
+        margin-right: 4px;
+    }
+</style>
+    <script>
+                // var ls = localStorage.getItem('TouteMonAnnée_cookies_navigation_status');
+                // if ((ls === null) || (ls === 'allow')) {
+                    var pls = document.createElement('script');
+                    pls.async = true;
+                    pls.defer = true;
+                    pls.dataset.dataDomain = 'toutemonannee.com';
+                    pls.src = 'https://balthazar.diedm.fr/js/plausible.js';
+                    pls.crossOrigin = 'anonymous';
+                    var h = document.getElementsByTagName('head')[0];
+                    h.parentNode.appendChild(pls);
+                //}
+            </script>
+            </head>
+
+<body>
+<div class="main">
+    <div id="wrapper">    
+        <header>
+            <center>
+                <ul class="menu">
+                    <li class="current"><a href="/access" class="clr-5">Access</a></li>
+                    <li><a href="/about" class="clr-2">About</a></li>
+                    <li><a href="/profile" class="clr-3">Profile</a></li>
+                    <li><a href="/message" class="clr-4">Mailbox</a></li>
+                    <li><a href="/notifications_parent" class="clr-1">Notif</a></li>
+                    <li><a href="/user/logout" class="clr-3">Log out</a> </li>
+                </ul>
+                  <hr color="white">
+                <ul class="menu">
+                    <li><a href="/publication" class="clr-6" aria-current="true" style="font-size: 25px;">Publications</a></li>
+                    <li><a href="/schedule" class="clr-6" aria-current="true" style="font-size: 25px;">Schedule</a></li>
+                    <li><a href="/dairy" class="clr-6"style="font-size: 25px;" >Diary Com</a></li>
+                    <li><a href="/gallery" class="clr-6" style="font-size: 25px;">Livre photo</a></li>
+                    <li><a href="/library" class="clr-6"style="font-size: 25px;" >Media library</a></li>
+                </ul>
+            </center>
+            </header>
+              <br><br>
+              <br><br><br>
+              <br><br><br>
+              <br><br>
+        
+              
+              <br>
+<!-- <header class="header"><div class="action-btn visible-on-desktop"></header> -->
+<div class="mobile-access-list white-bg visible-on-mobile">
+    <div class="dropdown access-list-dpd text-center"><span class="access-name m-r-xs">Classe de CE2                                                            <br />(2022-2023)</span>
+        <span class="caret"></span>
+     </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row"></div>
+        <br>
+<div id="page" class="col-xs-12 col-lg-12 " >
+    <div style="max-width: 1400px;width: 100%;margin-left: auto; margin-right: auto;">
+	<div class="actu">
+	<div class="p-w-sm">
+	<div id="calendar">
+    <div class="agenda-week-nav btn btn-info btn-sm prev"><span role="img" class="fa fa-chevron-left"></span></div>
+    <h2 class="m-t-xs" style="font-weight:500">
+        Semaine du <span class="week_first"></span> au <span class="week_last"></span> <span role="img" class="fa fa-calendar calendar_date text-info"></span>
+    </h2>
+    <div class="agenda-week-nav btn btn-info btn-sm next"><span role="img" class="fa fa-chevron-right"></span></div>
+</div>
+
+<hr class="m-t-sm m-b-md agenda-sep">
+
+<div class="tabs-container agenda p-w-lg">
+    <div class="agenda-tabs-select">
+        <div class="btn prev-day"><span role="img" class="fa fa-chevron-left"></span></div>
+        <select class="form-control">
+            <option value="Monday" class="Monday">Lundi</option>
+            <option value="Tuesday" class="Tuesday">Mardi</option>
+            <option value="Wednesday" class="Wednesday">Mercredi</option>
+            <option value="Thursday" class="Thursday">Jeudi</option>
+            <option value="Friday" class="Friday">Vendredi</option>
+            <option value="Saturday" class="Saturday">Samedi</option>
+            <option value="Sunday" class="Sunday">Dimanche</option>
+        </select>
+        <div class="btn next-day"><span role="img" class="fa fa-chevron-right"></span></div>
+    </div>
+    <ul class="nav nav-tabs agenda-tabs">
+        <li class=""><button type="button" class="btn btn-link btn-lg p-w-sm" id="sevenDate" data-toggle="tooltip" title="Semaine précédente"><span role="img" class="fa fa-chevron-left"></span></button></li>
+        <li class="active count-info"><a data-toggle="tab" href="#Monday" class="Monday">Lundi</a><span class="label label-danger eventCount0"></span></li>
+        <li class="count-info"><a data-toggle="tab" href="#Tuesday" class="Tuesday">Mardi</a><span class="label label-danger eventCount1"></span></li>
+        <li class="count-info"><a data-toggle="tab" href="#Wednesday" class="Wednesday">Mercredi</a><span class="label label-danger eventCount2"></span></li>
+        <li class="count-info"><a data-toggle="tab" href="#Thursday" class="Thursday">Jeudi</a><span class="label label-danger eventCount3"></span></li>
+        <li class="count-info"><a data-toggle="tab" href="#Friday" class="Friday">Vendredi</a><span class="label label-danger eventCount4"></span></li>
+        <li class="count-info"><a data-toggle="tab" href="#Saturday" class="Saturday">Samedi</a><span class="label label-danger eventCount5"></span></li>
+        <li class="count-info"><a data-toggle="tab" href="#Sunday" class="Sunday">Dimanche</a><span class="label label-danger eventCount6"></span></li>
+        <li class="count-info"><button type="button" class="btn btn-link btn-lg p-w-sm" id="dateSeven" data-toggle="tooltip" title="Semaine suivante"><span role="img" class="fa fa-chevron-right"></span></button></li>
+    </ul>
+    <div class="tab-content">
+        <div id="Monday" class="tab-pane active">
+            <div class="panel-body">
+                <h2 class="this-day m-t-none"></h2>
+                <div class="eventContainer">
+                    <div class="text-center p-lg well">
+                        <span role="img" class="fa fa-5x fa-folder-o text-muted"></span>
+                        <h4 class="text-muted">Conjugaison page 20 exercice 3.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Tuesday" class="tab-pane">
+            <div class="panel-body">
+                <h2 class="this-day m-t-none"></h2>
+                <div class="eventContainer">
+                    <div class="text-center p-lg well">
+                        <span role="img" class="fa fa-5x fa-folder-o text-muted"></span>
+                        <h4 class="text-muted">Mathématiques page 40 exrecice 3.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Wednesday" class="tab-pane">
+            <div class="panel-body">
+                <h2 class="this-day m-t-none"></h2>
+                <div class="eventContainer">
+                    <div class="text-center p-lg well">
+                        <span role="img" class="fa fa-5x fa-folder-o text-muted"></span>
+                        <h4 class="text-muted">A apprendre poème il a neigé</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Thursday" class="tab-pane">
+            <div class="panel-body">
+                <h2 class="this-day m-t-none"></h2>
+                <div class="eventContainer">
+                    <div class="text-center p-lg well">
+                        <span role="img" class="fa fa-5x fa-folder-o text-muted"></span>
+                        <h4 class="text-muted">Question le monde.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Friday" class="tab-pane">
+            <div class="panel-body">
+                <h2 class="this-day m-t-none"></h2>
+                <div class="eventContainer">
+                    <div class="text-center p-lg well">
+                        <span role="img" class="fa fa-5x fa-folder-o text-muted"></span>
+                        <h4 class="text-muted">Science et vie.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Saturday" class="tab-pane">
+            <div class="panel-body">
+                <h2 class="this-day m-t-none"></h2>
+                <div class="eventContainer">
+                    <div class="text-center p-lg well">
+                        <span role="img" class="fa fa-5x fa-folder-o text-muted"></span>
+                        <h4 class="text-muted">Pas de leçon ou évènement pour cette journée.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Sunday" class="tab-pane">
+            <div class="panel-body">
+                <h2 class="this-day m-t-none"></h2>
+                <div class="eventContainer">
+                    <div class="text-center p-lg well">
+                        <span role="img" class="fa fa-5x fa-folder-o text-muted"></span>
+                        <h4 class="text-muted">Pas de leçon ou évènement pour cette journée.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+		</div>
+        <br>
+	</div>
+<div id="modalNewMessage" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">Chargement...</div>
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+                </div>
+            </div>
+<!-- <nav class="navbar navbar--dock v-hidden">
+    <ul class="visible-links">
+        <li class="navbar__link ">
+            <a href="https://www.toutemonannee.com/journal/7b9f146c-3f40-4124-b335-543cdc612103/posts">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M456 32h-304C121.1 32 96 57.13 96 88v320c0 13.22-10.77 24-24 24S48 421.2 48 408V112c0-13.25-10.75-24-24-24S0 98.75 0 112v296C0 447.7 32.3 480 72 480h352c48.53 0 88-39.47 88-88v-304C512 57.13 486.9 32 456 32zM464 392c0 22.06-17.94 40-40 40H139.9C142.5 424.5 144 416.4 144 408v-320c0-4.406 3.594-8 8-8h304c4.406 0 8 3.594 8 8V392zM264 272h-64C186.8 272 176 282.8 176 296S186.8 320 200 320h64C277.3 320 288 309.3 288 296S277.3 272 264 272zM408 272h-64C330.8 272 320 282.8 320 296S330.8 320 344 320h64c13.25 0 24-10.75 24-24S421.3 272 408 272zM264 352h-64c-13.25 0-24 10.75-24 24s10.75 24 24 24h64c13.25 0 24-10.75 24-24S277.3 352 264 352zM408 352h-64C330.8 352 320 362.8 320 376s10.75 24 24 24h64c13.25 0 24-10.75 24-24S421.3 352 408 352zM400 112h-192c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h192c17.67 0 32-14.33 32-32v-64C432 126.3 417.7 112 400 112z" fill="currentColor"/></svg>
+                <!-- <img src="https://s1.toutemonannee.com/img/icons/nav/posts.png?v=5.9.0" alt="" /> <span>Publications</span>
+            </a>
+        </li>
+                                                <li class="navbar__link navbar__link--active">
+                    <a href="https://www.toutemonannee.com/journal/7b9f146c-3f40-4124-b335-543cdc612103/events">
+                        <div class="bg-info counter-badge counter-event"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C141.3 0 152 10.75 152 24V64H296V24C296 10.75 306.7 0 320 0C333.3 0 344 10.75 344 24V64H384C419.3 64 448 92.65 448 128V192H48V448C48 456.8 55.16 464 64 464H262.5L257.4 484.2C255.1 493.6 255.7 503.2 258.8 512H64C28.65 512 0 483.3 0 448V128C0 92.65 28.65 64 64 64H104V24C104 10.75 114.7 0 128 0V0zM296 256C309.3 256 320 266.7 320 280C320 293.3 309.3 304 296 304H120C106.7 304 96 293.3 96 280C96 266.7 106.7 256 120 256H296zM96 376C96 362.7 106.7 352 120 352H232C245.3 352 256 362.7 256 376C256 389.3 245.3 400 232 400H120C106.7 400 96 389.3 96 376zM564.1 250.1C579.8 265.7 579.8 291 564.1 306.7L534.7 336.1L463.8 265.1L493.2 235.7C508.8 220.1 534.1 220.1 549.8 235.7L564.1 250.1zM311.9 416.1L441.1 287.8L512.1 358.7L382.9 487.9C378.8 492 373.6 494.9 368 496.3L307.9 511.4C302.4 512.7 296.7 511.1 292.7 507.2C288.7 503.2 287.1 497.4 288.5 491.1L303.5 431.8C304.9 426.2 307.8 421.1 311.9 416.1V416.1z" fill="currentColor"/></svg>
+                        <!-- <img src="https://s1.toutemonannee.com/img/icons/nav/textbook.png?v=5.9.0" alt="" /> <span>Cahier de texte</span>
+                    </a>
+                </li>
+                                                            <li class="navbar__link ">
+                        <a href="https://www.toutemonannee.com/journal/7b9f146c-3f40-4124-b335-543cdc612103/transmissions">
+                            <div class="counter-badge counter-transmission"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M488 344H79.24l74.29-79.63C162.6 254.7 162.1 239.5 152.4 230.5C142.7 221.4 127.5 221.9 118.5 231.6l-112 120c-8.625 9.219-8.625 23.53 0 32.75l112 120C123.2 509.4 129.6 512 136 512c5.875 0 11.75-2.125 16.38-6.469c9.688-9.031 10.22-24.22 1.156-33.91L79.24 392H488c13.25 0 24-10.75 24-24S501.3 344 488 344zM24 168h408.8l-74.29 79.63c-9.062 9.688-8.531 24.88 1.156 33.91c9.656 9.094 24.88 8.562 33.91-1.156l112-120c8.625-9.219 8.625-23.53 0-32.75l-112-120C388.8 2.562 382.4 0 376 0c-5.875 0-11.75 2.125-16.38 6.469c-9.688 9.031-10.22 24.22-1.156 33.91L432.8 120H24C10.75 120 0 130.8 0 144S10.75 168 24 168z" fill="currentColor"/></svg>
+                            <!-- <img src="https://s1.toutemonannee.com/img/icons/nav/liaison_notebook.png?v=5.9.0" alt="" /> <span>Cahier de liaison</span>
+                        </a>
+                    </li> -->
+                                                                <!-- <li class="navbar__link "> -->
+                <!-- <a href="https://www.toutemonannee.com/journal/7b9f146c-3f40-4124-b335-543cdc612103/albums">
+                    <div class="bg-info counter-badge counter-album"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M448 352V48C448 21.53 426.5 0 400 0h-320C35.89 0 0 35.88 0 80v352C0 476.1 35.89 512 80 512h344c13.25 0 24-10.75 24-24s-10.75-24-24-24H416v-66.95C434.6 390.4 448 372.8 448 352zM368 464h-288c-17.64 0-32-14.34-32-32s14.36-32 32-32h288V464zM400 352h-320c-11.38 0-22.2 2.375-32 6.688V80c0-17.66 14.36-32 32-32h320V352zM152 160h176C341.3 160 352 149.3 352 136S341.3 112 328 112h-176C138.8 112 128 122.8 128 136S138.8 160 152 160zM152 240h176C341.3 240 352 229.3 352 216S341.3 192 328 192h-176C138.8 192 128 202.8 128 216S138.8 240 152 240z" fill="currentColor"/></svg>
+                    <!-- <img src="https://s1.toutemonannee.com/img/icons/nav/photobook.png?v=5.9.0" alt="" /> <span>Livre photos</span>
+                </a>
+            </li>
+                                            <li class="navbar__link ">
+                    <a href="https://www.toutemonannee.com/journal/7b9f146c-3f40-4124-b335-543cdc612103/medias">
+                        <div class="bg-info counter-badge counter-media"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M272 112c0 17.67 14.33 32 32 32c17.68 0 32-14.33 32-32S321.7 80 304 80C286.3 80 272 94.33 272 112zM160 400v-288H64c-35.35 0-64 28.65-64 64V384c0 35.35 28.65 64 64 64h225.1c4.646-19.76 17.81-36.53 36.23-48H160zM112 400H64c-8.822 0-16-7.178-16-16v-32h64V400zM112 304h-64V256h64V304zM112 208h-64v-32C48 167.2 55.18 160 64 160h48V208zM576 0H256C220.7 0 192 28.65 192 64v192c0 35.35 28.65 64 64 64h112V245.3c0-20.7 13.19-39 32.83-45.53l102.8-34.27l-36.99-54.41C463.7 106.7 458.7 104 453.3 104c-5.352 0-10.35 2.672-13.31 7.125l-62.74 94.11l-22.35-30.66C351.9 170.4 347.1 168 341.1 168c-5.109 0-9.914 2.441-12.93 6.574L256 272C247.2 272 240 264.8 240 256V64c0-8.822 7.178-16 16-16h320c8.822 0 16 7.178 16 16v72.07l16.81-5.605C613.8 128.8 618.9 128 624 128C629.6 128 634.1 129.2 640 130.9V64C640 28.65 611.3 0 576 0zM618.9 160.8l-208 69.33C404.4 232.3 400 238.5 400 245.3v172.4C394.9 416.7 389.6 416 384 416c-35.35 0-64 21.49-64 48s28.65 48 64 48c35.35 0 64-21.49 64-48V319l144-48v82.7C586.9 352.7 581.6 352 576 352c-35.35 0-64 21.49-64 48s28.65 48 64 48c35.35 0 64-21.49 64-48V176C640 165.1 629.3 157.4 618.9 160.8z" fill="currentColor"/></svg>
+                        <!-- <img src="https://s1.toutemonannee.com/img/icons/nav/media_library.png?v=5.9.0" alt="" /> <span>Médiathèque</span>
+                    </a>
+                <!-- </li> --> 
+                        <!-- <li class="navbar__link ">
+                <a href="https://www.toutemonannee.com/journal/7b9f146c-3f40-4124-b335-543cdc612103/facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 256c35.35 0 64-28.65 64-64s-28.65-64-64-64S128 156.7 128 192S156.7 256 192 256zM320 0H64C28.65 0 0 28.65 0 64v384c0 35.35 28.65 64 64 64h256c35.35 0 64-28.65 64-64V64C384 28.65 355.3 0 320 0zM336 448c0 8.822-7.178 16-16 16H64c-8.822 0-16-7.178-16-16V64c0-8.822 7.178-16 16-16h256c8.822 0 16 7.178 16 16V448zM224 288H160c-44.18 0-80 35.82-80 80C80 376.8 87.16 384 96 384h192c8.836 0 16-7.164 16-16C304 323.8 268.2 288 224 288z" fill="currentColor"/></svg>
+                    <!-- <img src="https://s1.toutemonannee.com/img/icons/nav/trombinoscope.png?v=5.9.0" alt="" /> <span>Trombinoscope</span>
+                </a>
+            </li> 
+                                        <li class="navbar__link">
+                <a href="#qwantModal" data-toggle="modal" data-target="#qwantModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M504.1 471l-134-134C399.1 301.5 415.1 256.8 415.1 208c0-114.9-93.13-208-208-208S-.0002 93.13-.0002 208S93.12 416 207.1 416c48.79 0 93.55-16.91 129-45.04l134 134C475.7 509.7 481.9 512 488 512s12.28-2.344 16.97-7.031C514.3 495.6 514.3 480.4 504.1 471zM48 208c0-88.22 71.78-160 160-160s160 71.78 160 160s-71.78 160-160 160S48 296.2 48 208z" fill="currentColor"/></svg>
+                    <!-- <img src="https://s1.toutemonannee.com/img/icons/nav/search.png?v=5.9.0" alt="" /> <span>Rechercher</span>
+                </a> -->
+            <!-- </li> --> 
+                <!-- <li class="navbar__link navbar__link--more  navbar__link--hidden">
+            <a href="#">
+                <svg class="icon-dots" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z" fill="currentColor"/></svg>
+                <!-- <svg class="icon-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M312.1 375c9.369 9.369 9.369 24.57 0 33.94s-24.57 9.369-33.94 0L160 289.9l-119 119c-9.369 9.369-24.57 9.369-33.94 0s-9.369-24.57 0-33.94L126.1 256L7.027 136.1c-9.369-9.369-9.369-24.57 0-33.94s24.57-9.369 33.94 0L160 222.1l119-119c9.369-9.369 24.57-9.369 33.94 0s9.369 24.57 0 33.94L193.9 256L312.1 375z" fill="currentColor"/></svg>
+                <!-- <span>Plus</span>
+            </a> -->
+        <!-- </li> -->
+    <!-- </ul> -->
+    <!-- <ul class="hidden-links hidden"></ul> -->
+<!-- </nav> -->
+
+                
+                                    <div id="qwantModal" class="modal fade" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h2 class="modal-title"><span role="img" class="fa fa-search"></span> Lancer une recherche sur internet avec Qwant Junior</h2>
+                                </div>
+                                <div class="modal-body" style="padding:20px;">
+                                    <div class="text-center m-b-md">
+                                        <img src="https://s1.toutemonannee.com/img/logo_qwantjunior.jpg?v=5.9.0" alt="">
+                                    </div>
+                                    <form type="post" target="_blank" rel="noopener" action="https://www.qwantjunior.com" method="get" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 col-sm-offset-1 control-label">Que recherches-tu ?</label>
+                                            <div class="col-sm-6">
+                                                <input name="t" type="hidden" value="web">
+                                                <input name="l" type="hidden" value="fr">
+                                                <div class="input-group">
+                                                    <input name="q" class="form-control" type="text" required>
+                                                    <div class="input-group-btn">
+                                                        <button class="btn btn-primary" type="submit">Ok !</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear" id="result"></div>
+                                        <br>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                    </div>
+    </div>
+    <footer class="text-center">
+    <a href="https://www.toutemonannee.com/" title="Accueil">
+        <img src="https://s1.toutemonannee.com/img/logos/tma-logo-dark.svg?v=5.9.0" alt="Logo TouteMonAnnée" style="height:100px;" />
+    </a>
+    <br>
+            <div class="h3 m-t-none">
+                        4474 Visites        </div>
+        <span>© 2023 Tous droits reservés - Directeur de publication : Barbara Chaminadour</span>
+        <span>Edité par TouteMonAnnée - Hébergé en France par OVHcloud</span>
+    <a href="#" id="backTop" title="Retour en haut">
+        <img src="https://s1.toutemonannee.com/img/back_top.png?v=5.9.0" alt="" />
+    </a>
+</footer>
+
+
+</div>
+                    
+    
+
+    <script>window.diedm = window.diedm || {};if(typeof diedm.const==='undefined') diedm.const = {};if(typeof diedm.route==='undefined') diedm.route = {};if(typeof diedm.env==='undefined') diedm.env = {};if(typeof diedm.label==='undefined') diedm.label = {};diedm.APP_DEBUG = false;diedm.currentLocale = "fr";diedm.currentUser = 4228898;diedm.monitoring_enabled = false;diedm.monitoring_environment = "production";diedm.monitoring_dsn = null;diedm.monitoring_tsr = 0.3;diedm.user_confirmed = true;diedm.languagesList = {"Allemand":{"name":"Deutsch","iso":"de","iso-lang":"de"},"Anglais":{"name":"English","iso":"gb","iso-lang":"en"},"Arabe":{"name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","iso":"ar","iso-lang":"ar"},"Chinois simplifi\u00e9":{"name":"\u4e2d\u6587","iso":"cn","iso-lang":"zh"},"Espagnol":{"name":"Espa\u00f1ol","iso":"es","iso-lang":"es"},"Fran\u00e7ais":{"name":"Fran\u00e7ais","iso":"fr","iso-lang":"fr"},"Italien":{"name":"Italiano","iso":"it","iso-lang":"it"},"N\u00e9erlandais":{"name":"Nederlands","iso":"nl","iso-lang":"nl"},"Portugais":{"name":"Portugu\u00eas","iso":"pt","iso-lang":"pt"},"Russe":{"name":"\u0420\u0443\u0441\u0441\u043a\u0438\u0439","iso":"ru","iso-lang":"ru"},"Turc":{"name":"T\u00fcrk\u00e7e","iso":"tr","iso-lang":"tr"},"Ukrainien":{"name":"Y\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430","iso":"uk","iso-lang":"uk"}};diedm.const.currentApp = "tma";diedm.currentSpaceType = null;diedm.currentSpaceSubType = null;diedm.isGuest = false;diedm.onSite = false;diedm.onJournal = true;diedm.tt_enabled = true;diedm.translateRoute = "https:\/\/www.toutemonannee.com\/translate";diedm.reactor_debug = false;</script>    
+    <script src="https://s1.toutemonannee.com/assets/vendors/jquery.min.js?v=5.9.0"></script>
+    <script src="https://s1.toutemonannee.com/assets/vendors/ua-parser.min.js?v=5.9.0"></script>
+    <script src="https://s1.toutemonannee.com/assets/js/global.js?v=5.9.0" type="text/javascript"></script>
+    <script>
+        window.paceOptions = {
+            document: false, // disabled
+            eventLag: false, // disabled
+        };
+    </script>
+    <script src="https://s1.toutemonannee.com/assets/vendors/vendors.min.js?v=5.9.0" type="text/javascript" defer></script>
+    <script src="https://s1.toutemonannee.com/assets/js/lang/messages.js?v=5.9.0" type="text/javascript"></script>
+    <script src="https://s1.toutemonannee.com/assets/js/instance/tma-theme.js?v=5.9.0" type="text/javascript" defer></script>
+    <script src="https://s1.toutemonannee.com/assets/js/instance/tma.js?v=5.9.0" type="text/javascript" defer></script>
+        <script src="https://s1.toutemonannee.com/assets/vendors/react.production.min.js?v=5.9.0"></script>
+    <script src="https://s1.toutemonannee.com/assets/vendors/react-dom.production.min.js?v=5.9.0"></script>
+            <script>var getCountersRoute = "https://www.toutemonannee.com/journal/7b9f146c-3f40-4124-b335-543cdc612103/dock/counters";</script>
+        <script src="https://s1.toutemonannee.com/assets/js/components/journal.js?v=5.9.0" type="text/javascript" defer></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if ((typeof Dropzone !== 'undefined') && (Dropzone !== null)) {
+            Dropzone.prototype.defaultOptions.acceptedFiles = ".doc,.docx,.docm,.xls,.xlsx,.xlsm,.pps,.ppsx,.ppsm,.ppt,.pptx,.pptm,.pub,.pubx,.rtf,.odt,.ods,.odp,.odf,.txt,.pdf,.csv,.pages,.key,.numbers,.jpg,.jpeg,.png,.gif,.svg,.heic,.mpga,.ogg,.oga,.opus,.mp3,.m4a,.flac,.wav,.wma,.aac,.xspf,.mkv,.flv,.avi,.mp4,.webm,.mov,.qt,.wmv,.asf,.mpeg,.3gp,.3gpp,.3g2,.m4v,.zip,.rar,.tar,.gz,.7z,.epub,.azw3,.azw,.prc,.mobi,.kcc,.cbz,.cbr,.cbt,.cba,.cb7,.swf,application/x-iwork-keynote-sffkey,application/vnd.apple.keynote,application/x-iwork-pages-sffpages,application/vnd.apple.pages,application/x-iwork-numbers-sffnumbers,application/vnd.apple.numbers"
+        }
+    });
+    </script>
+    <script>
+    var myDropzone;
+    var select_date = new Date("2023/02/22 01:00:00");
+    var formSubmitted = false;
+
+    document.addEventListener("DOMContentLoaded", function() {
+        Dropzone.autoDiscover = false;
+    });
+
+    function daysOfWeek(select_date, firstOrLast) {
+        firstOrLast = typeof firstOrLast !== 'undefined' ? firstOrLast : 0;
+        var select_dat = new Date(select_date);
+        if(select_dat.getDay() == 0)
+            var first = select_dat.getDate() - 6;
+        else
+            var first = select_dat.getDate() - select_dat.getDay() +1;
+
+        var last = first + 6; // last day is the first day + 6
+        if(firstOrLast == 0) // first
+            return new Date(select_dat.setDate(first));
+        else // last
+            return new Date(select_dat.setDate(last));
+    };
+
+    function changeWeek(new_date){
+        select_date = new_date;
+
+        // set week statement
+        $('#dzDate').val(select_date.getFullYear()+'-'+(select_date.getMonth()+1)+'-'+select_date.getDate());
+        var week_first = daysOfWeek(select_date, 0);
+        var monday = daysOfWeek(select_date, 0);
+        var week_last = daysOfWeek(select_date, 1);
+        $('.week_first').empty().append(week_first.toLocaleDateString("fr", {month: "long", day: "numeric"}));
+        $('.week_last').empty().append(week_last.toLocaleDateString("fr", {year: "numeric", month: "long", day: "numeric"}));
+        // set tabs datestamp ++ warning monday on week_first before alterating it ;)
+        $('.Monday').attr('rel', week_first.toDateString());
+
+        var tuesday = new Date(week_first.setTime( week_first.getTime() + 1 * 86400000 ));
+        var wednesday = new Date(week_first.setTime( week_first.getTime() + 1 * 86400000 ));
+        var thursday = new Date(week_first.setTime( week_first.getTime() + 1 * 86400000 ));
+        var friday = new Date(week_first.setTime( week_first.getTime() + 1 * 86400000 ));
+        var saturday = new Date(week_first.setTime( week_first.getTime() + 1 * 86400000 ));
+
+        $('.Tuesday').attr('rel',  tuesday.toDateString());
+        $('.Wednesday').attr('rel',  wednesday.toDateString());
+        $('.Thursday').attr('rel',  thursday.toDateString());
+        $('.Friday').attr('rel',  friday.toDateString());
+        $('.Saturday').attr('rel',  saturday.toDateString());
+        $('.Sunday').attr('rel',  week_last.toDateString());
+
+        // add new ids for event count label
+            // first remove old ids ++ remove content
+            $('.eventCount0, .eventCount1, .eventCount2, .eventCount3, .eventCount4, .eventCount5, .eventCount6').removeAttr('id');
+        $('.eventCount0').attr('id', monday.getFullYear()+'-'+("0"+(monday.getMonth()+1)).slice(-2)+'-'+("0"+monday.getDate()).slice(-2));
+        $('.eventCount1').attr('id', tuesday.getFullYear()+'-'+("0"+(tuesday.getMonth()+1)).slice(-2)+'-'+("0"+tuesday.getDate()).slice(-2));
+        $('.eventCount2').attr('id', wednesday.getFullYear()+'-'+("0"+(wednesday.getMonth()+1)).slice(-2)+'-'+("0"+wednesday.getDate()).slice(-2));
+        $('.eventCount3').attr('id', thursday.getFullYear()+'-'+("0"+(thursday.getMonth()+1)).slice(-2)+'-'+("0"+thursday.getDate()).slice(-2));
+        $('.eventCount4').attr('id', friday.getFullYear()+'-'+("0"+(friday.getMonth()+1)).slice(-2)+'-'+("0"+friday.getDate()).slice(-2));
+        $('.eventCount5').attr('id', saturday.getFullYear()+'-'+("0"+(saturday.getMonth()+1)).slice(-2)+'-'+("0"+saturday.getDate()).slice(-2));
+        $('.eventCount6').attr('id', week_last.getFullYear()+'-'+("0"+(week_last.getMonth()+1)).slice(-2)+'-'+("0"+week_last.getDate()).slice(-2));
+
+        // get events count per day
+        $.get('https://www.toutemonannee.com/journal/7b9f146c-3f40-4124-b335-543cdc612103/events/count', {
+            date: select_date.getFullYear()+'-'+(select_date.getMonth()+1)+'-'+select_date.getDate()
+        })
+        .done( function(eventnbs){
+            // erase old week content
+            $('.eventCount0, .eventCount1, .eventCount2, .eventCount3, .eventCount4, .eventCount5, .eventCount6').empty();
+            // right current week content
+            $.each( eventnbs , function( key, eventnb)
+            {
+                $('#'+eventnb.date).append(eventnb.total);
+            });
+        });
+
+        // switch tab active
+        $('a[rel="'+select_date.toDateString()+'"]').tab('show');
+        // Update select for mobile
+        var selectedOption = $('.agenda-tabs-select option[rel="' + select_date.toDateString() + '"]');
+        selectedOption.attr('selected', 'selected');
+        $('.agenda-tabs-select select').attr('id', selectedOption.val() + '-mobile');
+
+        $('#editEventForm').attr('rel', null).addClass('hidden').detach().appendTo('#collapseAddEvent');
+    };
+
+    function getFileType(zFile){
+        var zFileType = 0;
+        switch(zFile.type) {
+            case 1:
+                zFileType = 'image';
+                break;
+            case 3:
+                zFileType = 'video';
+                break;
+            case 2:
+                zFileType = 'sound';
+                break;
+            case 4:
+                zFileType = 'doc';
+                break;
+            case 5:
+                zFileType = 'url';
+                break;
+            default:
+                zFileType = 'doc';
+                break;
+        }
+        return zFileType;
+    }
+
+    function getDateEvents(){
+        $('.tabs-container.agenda .active .this-day').empty().append(select_date.toLocaleDateString("fr", {weekday: "long", year: "numeric", month: "long", day: "numeric"}));
+        $.get('https://www.toutemonannee.com/journal/7b9f146c-3f40-4124-b335-543cdc612103/events/list', {
+            date: select_date.getFullYear()+'-'+(select_date.getMonth()+1)+'-'+select_date.getDate()
+        })
+        .done( function(events) {
+            $('.tabs-container.agenda .active .eventContainer').empty();
+            // si pas d'event :
+            if ($.isEmptyObject(events)) {
+                $('.tabs-container.agenda .active .eventContainer').append('<div class="text-center p-lg well"><span role="img" class="fa fa-5x fa-folder-o text-muted"></span><h4 class="text-muted">Pas de leçon ou évènement pour cette journée.</h4></div>');
+            } else {
+                $.each( events , function( key, event) {
+                    event0 = event[0];
+                    var titleEventChange = '';
+                    var subject ='';
+                    var eventActionBtn = '';
+                    if ($.isEmptyObject(event0.event_subject)) {
+                        titleEventChange = '<h3><span role="img" class="fa fa-star"></span> '+ ((event0.title == null) ? _js('Événement') : '<span class="translatable-title">'+event0.title+'</span>')  + ' ' + event0.recipientsHtml +'</h3>';
+                    } else {
+                        titleEventChange = '<h3><span class="text-info"">'+event0.event_subject.title+'</span>'+ ((event0.title == null) ? '' : ' : ' + '<span class="translatable-title">'+event0.title+'</span>') + ' ' + event0.recipientsHtml + '</h3>';
+                        subject = event0.event_subject.id;
+                    }
+
+                    var translateButton = '';
+                                            translateButton = '<div class="translate-btn m-t-xs">'+
+                            '<div class="dropdown inline">'+
+                                '<a class="small dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-loading-text="<span role=\'img\' class=\'fa fa-globe\' aria-hidden=\'true\'></span>  Traduction en cours ...">'+
+                                    '<span role="img" class="fa fa-globe" aria-hidden="true"></span> Traduire' +
+                                '</a>'+
+                                '<ul class="dropdown-menu">';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="de">'+
+                                                'Allemand'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="en">'+
+                                                'Anglais'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="ar">'+
+                                                'Arabe'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="zh">'+
+                                                'Chinois simplifié'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="es">'+
+                                                'Espagnol'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="fr">'+
+                                                'Français'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="it">'+
+                                                'Italien'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="nl">'+
+                                                'Néerlandais'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="pt">'+
+                                                'Portugais'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="ru">'+
+                                                'Russe'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="tr">'+
+                                                'Turc'+
+                                            '</a>'+
+                                        '</li>';
+                                                                            translateButton += '<li>'+
+                                            '<a href="#" data-object="event" data-object-id="'+event0.id+'" data-lang="uk">'+
+                                                'Ukrainien'+
+                                            '</a>'+
+                                        '</li>';
+                                                                    translateButton += '</ul>'+
+                            '</div>'+
+                            '<a class="small reset m-l-sm" data-object="event" data-object-id="'+event0.id+'" style="display:none;">'+
+                                '<span role="img" class="fa fa-undo" aria-hidden="true"></span> ' + "Langue d'origine"+
+                            '</a>'
+                        '</div>';
+                    
+                                        $('.tabs-container.agenda .active .eventContainer').append('<div id="event_'+event0.id+'" class="well p-xs '+event0.id+'">'+
+                        '<div id="eventContent'+event0.id+'" class="eventContent">'+
+                            eventActionBtn+
+                            titleEventChange+'<p><span class="translatable-content">'+((event0.content == null) ? ' ' : event0.content.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, "$1<br>$2"))+'</span></p>'+
+                        '</div>'+
+                        '<div class="editEventForm" id="editEvent'+event0.id+'"></div>'+
+                        '<div class="eventFiles" id="files'+event0.id+'"></div>'+
+                        '<div class="eventAddFiles row" id="addFiles'+event0.id+'"></div>'+
+                        translateButton +
+                    '</div>');
+                    $('#eventContent' + event0.id).find('button.editEvent').data('recipient', JSON.stringify(event0.recipients));
+
+                    $.each( event0.files, function( key, file) { // add files
+                        var fileType = getFileType(file);
+                        var fileStatus = (file.status == 0) ? ' unprocessed' : '';
+                        var fileTitle = (file.title == null) ? '' : file.title;
+
+                        var fileView = '<div class="file-box file-box--small '+fileType+fileStatus+'" id="file'+file.id+'" data-rel="'+file.id+'">'+
+                            '<div class="file">';
+
+                        if(fileType == 'image'){
+                            fileView += '<a class="file-preview" href="'+file.path+'&src=hd" ' +
+                                'data-fancybox="lightboxEventFiles" ' +
+                                'data-caption="'+fileTitle+'" ' +
+                                'data-thumbnail="'+file.path+'?src=mini">' +
+                                '<div class="image">'+
+                                    '<img src="'+file.path+'&src=mini" alt="'+fileTitle+'"/>' +
+                                '</div>'+
+                            '</a>';
+                        }else if(fileType == 'audio') {
+                            fileView += '<audio class="mejs__player" controls="controls" src="'+file.path+'" preload="metadata" style="width:100%">' +
+                                _js('Votre navigateur ne peut pas lire ce son') + ': <a href="'+ file.path +'">' + _js('Téléchargez-le') + '</a>' +
+                            ' </audio>';
+                        }else if(fileType == 'video' || file.isIframe) {
+                            fileView += '<a class="file-preview" href="'+file.path+'" ' +
+                                'data-fancybox="lightboxEventFiles" ' +
+                                'data-caption="'+fileTitle+'" ' +
+                                'data-thumbnail="'+file.poster+'" ' +
+                                'data-type="iframe">';
+                                if(file.poster != null){
+                                    fileView += '<img src="'+file.poster+'" class="post-img-preview" />';
+                                }
+                                else{
+                                    fileView += '<span class="corner"></span>' +
+                                    '<div class="icon">' +
+                                        '<span role="img" class="fa fa-film"></span>' +
+                                    '</div>';
+                                }
+                            fileView += '</a>';
+                        } else {
+                            fileView += '<a class="file-preview" href="'+file.path+'" target="_blank" rel="noopener">' +
+                                '<span class="corner"></span>'+
+                                '<div class="icon">' + file.icon + '</div>'+
+                            '</a>';
+                        }
+
+                        fileView += '<div class="file-name text-center">';
+                        if (!diedm.onJournal || diedm.onJournal && fileTitle && fileTitle.length > 0) {
+                            fileView += '<p data-url="https://www.toutemonannee.com/space/7b9f146c-3f40-4124-b335-543cdc612103/events/files/edit/'+file.id+'" data-pk="1" data-id="'+file.id+'" class="editable editable-click">';
+                            if (fileTitle && fileTitle.length > 0) {
+                                fileView += fileTitle
+                            } else {
+                                fileView += '<span class="text-muted">' + _js('Légende') + '</span>';
+                            }
+
+                            fileView += '</p>';
+                        }
+
+                        if (fileType != 'url') {
+                        fileView += '<div style="padding-top: 2px;">' +
+                            '<a href="' + file.download_path + '" target="_FILE" class="btn btn-success btn-xs download" data-loading-text="<span role=\'img\' class=\'fa fa-spinner fa-spin\'></span>" data-toggle="tooltip" data-id="' + file.id + '" title="' + _js("Télécharger") + '">' +
+                                '<span role="img" class="fa fa-download"></span>' +
+                            '</a> ';
+                        }
+
+                                                            fileView += '</div>' +
+                                '</div>'+
+                            '</div>'+
+                        '</div>';
+
+                        $('#files'+event0.id).append(fileView);
+                    });
+                });
+
+                $('[data-toggle="tooltip"]').tooltip()
+            }
+
+            $('#edit_event_recipient').trigger('change').trigger('chosen:updated');
+        });
+    };
+
+    function resetAddEventForm()
+    {
+        $('#addEventForm')[0].reset();// reset the form
+        $('#addEventForm #newEventTitle').prop('disabled', false).removeClass('hidden');// reset prop of title field
+        // reset chosen select new_event_recipient
+        $("#new_event_recipient")
+            .val('')
+            .find('optgroup:first option:first')
+            .prop('selected', true)
+            .trigger('chosen:updated');
+        $('.calendar_date').datepicker('update', select_date);
+    }
+
+    $(function() {
+        // init datapickerS
+        $.fn.datepicker.defaults.format = "dd/mm/yyyy";
+        $.fn.datepicker.defaults.language = "fr";
+        $.fn.datepicker.defaults.keyboardNavigation = false;
+        $.fn.datepicker.defaults.forceParse = false;
+        $.fn.datepicker.defaults.calendarWeeks = true;
+        $.fn.datepicker.defaults.autoclose = true;
+        $.fn.datepicker.defaults.startDate = new Date('2022-08-01 00:00:00');
+        $.fn.datepicker.defaults.endDate = new Date('2023-07-31 23:59:59');
+
+        // init weeks
+        changeWeek(select_date);
+        getDateEvents();
+
+        $('#calendar .calendar_date, #addEventForm .calendar_date').datepicker()
+            .on('changeDate', function(e) {
+                changeWeek($(this).datepicker( 'getDate' ));
+                $('.calendar_date').datepicker('update', select_date);
+                getDateEvents();
+            });
+        $('.agenda-tabs a[data-toggle="tab"]').on('shown.bs.tab', function() {
+            select_date = new Date($('.agenda-tabs li.active a').attr('rel'));
+            $('.calendar_date').datepicker('update', select_date);
+            $('#editEventForm').attr('rel', null).addClass('hidden').detach().appendTo('#collapseAddEvent');
+            getDateEvents();
+        });
+
+        $('#sevenDate').on('click', function() {
+            select_date.setDate(select_date.getDate() - 7)
+            changeWeek(select_date);
+            $('.calendar_date').datepicker('update', select_date);
+            getDateEvents();
+        });
+        $('#dateSeven').on('click', function() {
+            select_date.setDate(select_date.getDate() + 7)
+            changeWeek(select_date);
+            $('.calendar_date').datepicker('update', select_date);
+            getDateEvents();
+        });
+
+        $('.just-event a').on('click', function(e) {
+            e.stopPropagation();
+            changeWeek(new Date($(this).attr('rel')));
+            $('.calendar_date').datepicker('update', select_date);
+            getDateEvents();
+        });
+
+
+        
+        // initialize fancybox gallery
+        $("[data-fancybox]").fancybox({
+            animationEffect : "fade",
+            animationDuration : 250,
+            loop: true,
+            protect: true
+        });
+
+
+            });
+</script>
+<script>
+    var new_message_recipient_selected = [];
+    var filterType = null;
+    var filterVal = null;
+
+    $(function () {
+        $('#modalNewMessage').on('show.bs.modal', function (e) {
+            var recipientFilter = $(e.relatedTarget).data('filter');
+            if (typeof recipientFilter !== 'undefined') {
+                var filterData = recipientFilter.split('-');
+                filterType = filterData[0];
+                filterVal = filterData[1];
+            }
+            else{
+                filterType = null;
+                filterVal = null;
+            }
+        })
+        .on('shown.bs.modal', function (e) {
+            if (filterVal !== null && filterType !== null) {
+                $('#new_message_recipient')
+                    .find('option[value="' + filterVal + '"]')
+                    .prop('selected', true);
+                $('#new_message_recipient').trigger('change').trigger('chosen:updated');
+            }
+        })
+        .on('loaded.bs.modal', function(e) { //first time
+            $('#new_message_recipient').chosen({
+                include_group_label_in_selected: true,
+                allow_single_deselect: true,
+                width: "100%"
+            })
+            .change(function () {
+                new_message_recipient_selected = [];
+                $("#new_message_recipient option:selected").each(function() {
+                    new_message_recipient_selected.push($(this).val());
+                });
+            })
+            .removeClass('hidden');
+
+            if (filterVal !== null && filterType !== null) {
+                $('#new_message_recipient')
+                    .find('option[value="' + filterVal + '"]')
+                    .prop('selected', true);
+                $('#new_message_recipient').trigger('change').trigger('chosen:updated');
+            }
+
+            document.querySelector('textarea[name="new_message_content"]').addEventListener('change', function (event) {
+                if (this.value.indexOf('iframe') > -1) {
+                    const regex = /<iframe\s+.*?\s+src=("|')(.*?)("|').*?<\/iframe>/gm;
+                    this.value = this.value.replace(regex, '$2');
+                }
+                this.value = stripTags(this.value).trim();
+            })
+        })
+        .on('hidden.bs.modal', function () {
+            if ($('#sendMessageForm')[0]) {
+                $('#sendMessageForm')[0].reset();
+            }
+            $('#new_message_recipient').find('option').prop('selected', false);
+            $('#new_message_recipient').trigger('change').trigger('chosen:updated');
+        });
+    });
+</script>
+<script>
+var resizeDropdownSpaces = function() {
+    var dpdSpaces = document.querySelector('.dropdown-spaces');
+    if (dpdSpaces) {
+        dpdSpaces.style.maxHeight = (window.innerHeight - (document.querySelector('.header').getBoundingClientRect().height + 10)) + 'px';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', resizeDropdownSpaces)
+
+$(function() {
+    var xhr = false;
+    $('#toggle-layout').on('click', function (e) {
+        e.preventDefault();
+        if (!xhr) {
+            xhr = true;
+            $.get('https://www.toutemonannee.com/layout/switch')
+                .done(function(response) {
+                    xhr = false;
+                    location.reload();
+                })
+                .fail(function() {
+                    xhr = false;
+                });
+        }
+    });
+
+    resizeDropdownSpaces();
+    $(window).on('resize', resizeDropdownSpaces);
+
+    $('body').on('click', '.dropdown-messages-box', function(e) {
+        e.preventDefault();
+        window.location = $(this).attr('rel');
+    });
+
+    $('#notificationsListDropdown').on('shown.bs.dropdown', function() {
+        $('#notificationsList').children('.loadingItem').removeClass('hidden');
+        $('#notificationsList').children('li.notif-item,li.divider').remove();
+        $.get('https://www.toutemonannee.com/notifications/list?old_version=1')
+        .done(function(res) {
+            $('#notificationsList').children('.loadingItem').addClass('hidden');
+            $('#notificationsList').prepend(res);
+        });
+    });
+
+    $('#notificationsList').on('click', '> li.notif-item', function(e) {
+        e.preventDefault();
+        var liEl = $(this);
+        $.post('https://www.toutemonannee.com/notifications/mark-as-read', {
+            notif: liEl.attr('rel')
+        })
+        .done(function() {
+            var counter = $('#notificationsListDropdown .label');
+            if (counter) {
+                var value = parseInt(counter.text(), 10) - 1;
+                if (value == 0) {
+                    counter.remove();
+                } else {
+                    counter.text(value);
+                }
+            }
+
+            var href = liEl.children('a').attr('href');
+            if (href) {
+                location.replace(href);
+            }
+        });
+    });
+
+    $('#markAllNotifAsRead').on('click', function(e) {
+        e.preventDefault();
+        var href = $(this);
+        $.post(href.attr('href'))
+        .done(function (res) {
+            toastr.success(res.reason);
+            $('#notificationsList').find('li:not(.action)').fadeOut(100, function() {
+                $(this).remove();
+            });
+            $('#notificationsList').siblings('.count-info').find('.label').html('');
+            $('#markAllNotifAsReadBtn,#noNotificationMsg').toggleClass('hidden');
+        });
+    });
+
+    $('#markAllMsgAsRead').on('click', function(e) {
+        e.preventDefault();
+        var href = $(this);
+        $.post(href.attr('href'))
+        .done(function (res) {
+            toastr.success(res.reason);
+            $('#recentMessagesList').find('li.action').addClass('hidden');
+            $('#recentMessagesList').siblings('.count-info').find('.label').html('');
+        });
+    });
+
+	var titleTop = function() {
+		var w = $(window).width();
+		var x = $('#userMenu').outerWidth();
+		$('#topBarTitle').css('max-width', (w - x - 410) + 'px');
+	};
+
+    var titleTopTimeout = null;
+    $(window).on('resize', function(e) {
+        if (titleTopTimeout) clearTimeout(titleTopTimeout);
+        titleTopTimeout = titleTop();
+    });
+    $(window).trigger('resize');
+
+});
+</script>
+	<script>
+		$(function() {
+			//hide or show the "back to top" link
+			$(window).scroll(function(){
+				if($(this).scrollTop() > 300)
+					$('#backTop').addClass('is-visible');
+				else
+					$('#backTop').removeClass('is-visible');
+			});
+
+			//smooth scroll to top
+			$('#backTop').on('click', function(e){
+				e.preventDefault();
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+			});
+		});
+	</script>
+<!-- Code injected by live-server -->
+<script>
+	// // <![CDATA[  <-- For SVG support
+	// if ('WebSocket' in window) {
+	// 	(function () {
+	// 		function refreshCSS() {
+	// 			var sheets = [].slice.call(document.getElementsByTagName("link"));
+	// 			var head = document.getElementsByTagName("head")[0];
+	// 			for (var i = 0; i < sheets.length; ++i) {
+	// 				var elem = sheets[i];
+	// 				var parent = elem.parentElement || head;
+	// 				parent.removeChild(elem);
+	// 				var rel = elem.rel;
+	// 				if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+	// 					var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+	// 					elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+	// 				}
+	// 				parent.appendChild(elem);
+	// 			}
+	// 		}
+	// 		var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+	// 		var address = protocol + window.location.host + window.location.pathname + '/ws';
+	// 		var socket = new WebSocket(address);
+	// 		socket.onmessage = function (msg) {
+	// 			if (msg.data == 'reload') window.location.reload();
+	// 			else if (msg.data == 'refreshcss') refreshCSS();
+	// 		};
+	// 		if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+	// 			console.log('Live reload enabled.');
+	// 			sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+	// 		}
+	// 	})();
+	// }
+	// ]]>
+</script>
+</body>
+</html>

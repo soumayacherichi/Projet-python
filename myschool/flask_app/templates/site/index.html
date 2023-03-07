@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Art School</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/reset.css') }}">
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/grid_12.css') }}">
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/slider.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/tms-0.4.1.js') }}"></script>
+<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
+<script>
+$(document)
+    .ready(function () {
+    $('.slider')
+        ._TMS({
+        show: 0,
+        pauseOnHover: true,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 800,
+        preset: 'fade',
+        pagination: true,
+        pagNums: false,
+        slideshow: 7000,
+        numStatus: false,
+        banners: false,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+
+</script>
+<style>
+  .main2{
+  display:flex;
+  justify-content: right;}
+</style>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body>
+<div class="main">
+  <header>
+    <center>
+      <ul class="menu">
+      <li class="current"><a href="/access" class="clr-5">Access</a></li>
+      <li><a href="/about" class="clr-2">About</a></li>
+      <li><a href="/profile" class="clr-3">Profile</a></li>
+      <li><a href="/message" class="clr-4">Mailbox</a></li>
+      <li><a href="/notifications_parent" class="clr-1">Notif</a></li>
+      <li><a href="/user/logout" class="clr-3">Log out</a> </li>
+    </ul>
+    </center>
+  </header>
+  <section id="content">
+    <div class="container_12">
+      <nav><br><br> <h1 class="link-3"> Welcome Madame Soumaya Cherichi </h1>
+        <ul>        
+          <div class="btns pad-2">
+            <a href="/notifications_parent" class="link-2">📚Class CE1 A Karim Ben Ahmed &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;</a>
+            <a href="/notifications_parent" class="link-2">📚Class CE2 B Alyssa Ben Ahmed</a>
+          </div>
+        </ul>
+        <div id="slide">
+          <div class="slider">
+            <ul class="items">
+              <li><img src="https://media.gettyimages.com/id/519518587/fr/photo/mixed-race-boy-smiling.jpg?s=612x612&w=0&k=20&c=kABbCxrmdn6regluuE04kWA1QfClF3C6vgSZ4Gp_YeM=" alt=""></li>
+              <li><img src="https://www.bienenseigner.com/wp-content/uploads/2022/05/sortie-pedagogique-2.jpg" alt="certificate"></li> -->
+            </ul>
+            
+            <a href="#" class="prev"></a><a href="#" class="next"></a> 
+          </div>
+          <div class="slider">
+            <ul class="items">
+              <li><img src="https://media.istockphoto.com/id/1270068774/fr/photo/fille-d%C3%A9cole-primaire-de-sourire-avec-le-sac.jpg?s=612x612&w=0&k=20&c=zzgEFQ9jp09adF54hxtrtKRb4KBRJn_v1C-JUxkErI4=" alt="photo"></li>
+              <li><img src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/63845712d8b81_json_image_1669617426.webp" alt="certificate"></li> -->
+            </ul>
+            
+            <a href="#" class="prev"></a><a href="#" class="next"></a>
+          </div>
+        </div> 
+    </nav>
+    </div>
+  </section>
+  <!--==============================content================================-->
+  <section id="content">
+    <div class="container_12">
+      <div class="grid_4 bot-1">
+        <div class="art"></div>
+          <h2 class="top-1 p2">Events</h2>
+          <p class="text-1 p3">January 31 - “Book fair”</p>
+          <p>Please find attached the organization of our book fair which will start on Tuesday 31 January.</p>
+          <p class="text-1 top-2 p3">January 06 - “Archaeological outing in Zaghouan”</p>
+          <p>An educational outing will take place on Friday 06 January. A document has been given to your child.
+          Please read it and sign it.</p>
+          <a href="/notification" class="link-1 top-3">News Archive</a> 
+        </div>
+      <div class="grid_8">
+        <div class="pad-1">
+          <h2 class="p2">Welcome To School</h2>
+          <p class="text-1">Our school is located in Ennasr 2. In our school go about 100 students from CP to CM2 grade.</p>
+        </div>
+        <div class="block-1">
+          <div class="block-1-shadow">
+            <h2 class="clr-6 p4">Our Gallery</h2>
+            <div class="box-1"> <a href="#" class="img-border"><img src="{{ url_for('static', filename='images/img1.jpg') }}"></a>
+              <p class="text-2">Islem, 9 years</p>
+            </div>
+            <div class="box-1 last"> <a href="#" class="img-border"><img src="{{ url_for('static', filename='images/img2.jpg') }}"></a>
+              <p class="text-2">Rym, 8 years</p>
+            </div>
+            <div class="clear p5"></div>
+            <div class="box-1"> <a href="#" class="img-border"><img src="{{ url_for('static', filename='images/img3.jpg') }}"></a>
+              <p class="text-2">Alyssa, 9 years</p>
+            </div>
+            <div class="box-1 last"> <a href="#" class="img-border"><img src="/Flask_app/static/images/img4.jpg" alt=""></a>
+              <p class="text-2">Sandra, 10 years</p>
+            </div>
+            <div class="clear"></div>
+            <div class="pad-2"> <a href="gallery.html" class="link-2">Full Gallery</a> </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <!--==============================footer=================================-->
+        <footer>
+          <p>© 2023 Ennasr School</p>
+          <p>Website powered by Najwa Elfahem & Soumaya Cherichi</a></p>
+        </footer>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
